@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.example.demo.component.DemoBean;
+import com.example.demo.component.EmployeeBean;
 
 
 @SpringBootApplication
@@ -18,7 +19,14 @@ public class HelloWorldDemoApplication {
 		
 		DemoBean demoBean = context.getBean(DemoBean.class);
 		logger.debug(demoBean.toString());
-	
+		logger.debug("Hi ssssshruthi");
+		
+		EmployeeBean employeeBean = context.getBean(EmployeeBean.class);
+		employeeBean.setEname("Shruthi");
+		employeeBean.setEid(10);
+		
+		employeeBean.showDetails();
+		
 	}
 
 }
